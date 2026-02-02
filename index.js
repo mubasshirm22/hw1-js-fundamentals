@@ -24,15 +24,23 @@ function max(arr) {
 
 // ============ PART 2: STRING FUNCTIONS ============
 function capitalize(str) {
-  // TODO
+  if (str.length === 0) return "";
+  return str[0].toUpperCase() + str.slice(1);
 }
 
 function reverse(str) {
-  // TODO
+  return str.split("").reverse().join("");
 }
 
 function countVowels(str) {
-  // TODO
+  const vowels = new Set(["a", "e", "i", "o", "u"]);
+  let count = 0;
+
+  for (const ch of str.toLowerCase()) {
+    if (vowels.has(ch)) count++;
+  }
+
+  return count;
 }
 
 // ============ PART 3: OBJECT ============
