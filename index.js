@@ -6,19 +6,20 @@
 const numbers = [10, 5, 8, 12, 3, 7, 15, 2, 9, 6];
 
 function sum(arr) {
-  // TODO
+  return arr.reduce((total, n) => total + n, 0);
 }
 
 function average(arr) {
-  // TODO
+  if (arr.length === 0) return 0;
+  return sum(arr) / arr.length;
 }
 
 function min(arr) {
-  // TODO
+  return Math.min(...arr);
 }
 
 function max(arr) {
-  // TODO
+  return Math.max(...arr);
 }
 
 // ============ PART 2: STRING FUNCTIONS ============
